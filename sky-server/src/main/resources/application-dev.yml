@@ -6,3 +6,10 @@ sky:
     database: sky_take_out
     username: root
     password: wjz123456
+  alioss:
+    # 敏感信息不写入仓库：优先读环境变量，其次读本地私密配置 application-local.yml，
+    # 都没有时为空（不影响启动，仅文件上传功能不可用）
+    endpoint: ${SKY_ALIOSS_ENDPOINT:${sky.alioss.local.endpoint:oss-cn-beijing.aliyuncs.com}}
+    access-key-id: ${SKY_ALIOSS_ACCESS_KEY_ID:${sky.alioss.local.access-key-id:}}
+    access-key-secret: ${SKY_ALIOSS_ACCESS_KEY_SECRET:${sky.alioss.local.access-key-secret:}}
+    bucket-name: ${SKY_ALIOSS_BUCKET_NAME:${sky.alioss.local.bucket-name:kikyo-java-ai}}

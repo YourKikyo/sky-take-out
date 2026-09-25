@@ -4,6 +4,9 @@ server:
 spring:
   profiles:
     active: dev
+  # 本地私密配置（OSS / 微信支付等密钥），该文件已被 .gitignore 忽略，不存在时静默跳过
+  config:
+    import: optional:classpath:application-local.yml
   main:
     allow-circular-references: true
   datasource:
@@ -37,3 +40,8 @@ sky:
     admin-ttl: 2592000000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+  alioss:
+    endpoint: ${sky.alioss.endpoint}
+    access-key-id: ${sky.alioss.access-key-id}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    bucket-name: ${sky.alioss.bucket-name}

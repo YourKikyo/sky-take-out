@@ -1,0 +1,10 @@
+# 本地私密配置模板：复制为同目录下的 application-local.yml 并填入真实值。
+# application-local.yml 已被 .gitignore 忽略，不会提交到仓库。
+# 该文件优先级低于环境变量，即环境变量 SKY_ALIOSS_* 存在时会覆盖此处的值。
+sky:
+  alioss:
+    local:
+      endpoint: oss-cn-beijing.aliyuncs.com
+      access-key-id: 你的AccessKeyId
+      access-key-secret: 你的AccessKeySecret
+      bucket-name: 你的BucketName

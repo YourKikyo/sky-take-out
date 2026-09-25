@@ -4,3 +4,6 @@
 *.class
 *Test.java
 **/test/
+# 本地私密配置（含 OSS / 微信支付等密钥），保留 example 模板
+application-local.yml
+application-local.yaml
